@@ -16,4 +16,4 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: build application
-        run: npm run dev
+        run: npm run build
