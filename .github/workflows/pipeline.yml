@@ -1,0 +1,19 @@
+name : Deployment pipline
+
+on:
+  push: 
+    branches:
+      - main
+
+jobs:
+  simple_deployment_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: '18'
+      - name: install dependencies
+        run: npm install
+      - name: build application
+        run: npm run build
